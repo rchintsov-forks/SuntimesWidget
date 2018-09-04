@@ -704,7 +704,7 @@ public class SuntimesUtils
     {
         if (c1 != null && c2 != null)
         {
-            TimeDisplayText displayText = timeDeltaLongDisplayString(c1.getTime(), c2.getTime(), showWeeks, showHours,false);
+            TimeDisplayText displayText = timeDeltaLongDisplayString1(c1.getTime(), c2.getTime(), showWeeks, showHours,false);
             displayText.setSuffix("");
             return displayText;
 
@@ -722,11 +722,11 @@ public class SuntimesUtils
      */
     public TimeDisplayText timeDeltaLongDisplayString(long timeSpan1, long timeSpan2)
     {
-        return timeDeltaLongDisplayString(timeSpan1, timeSpan2, false, true, false);
+        return timeDeltaLongDisplayString1(timeSpan1, timeSpan2, false, true, false);
     }
     public TimeDisplayText timeDeltaLongDisplayString(long timeSpan1, long timeSpan2, boolean showSeconds)
     {
-        return timeDeltaLongDisplayString(timeSpan1, timeSpan2, false, true, showSeconds);
+        return timeDeltaLongDisplayString1(timeSpan1, timeSpan2, false, true, showSeconds);
     }
 
     public TimeDisplayText timeDeltaLongDisplayString(long timeSpan, boolean showSeconds)
@@ -737,7 +737,81 @@ public class SuntimesUtils
     }
 
     @SuppressWarnings("ConstantConditions")
-    public TimeDisplayText timeDeltaLongDisplayString(long timeSpan1, long timeSpan2, boolean showWeeks, boolean showHours, boolean showSeconds)
+    public TimeDisplayText timeDeltaLongDisplayString1(long timeSpan1, long timeSpan2, boolean showWeeks, boolean showHours, boolean showSeconds)
+    {
+        StringBuilder value = new StringBuilder(strEmpty);
+        String units = strEmpty;
+        String suffix = strEmpty;
+
+        long timeInMillis = timeSpan2 - timeSpan1;
+        long numberOfSeconds = timeInMillis / 1000;
+        suffix += ((numberOfSeconds > 0) ? strTimeLonger : strTimeShorter);
+        numberOfSeconds = Math.abs(numberOfSeconds);
+
+        long numberOfMinutes = numberOfSeconds / 60;
+        long numberOfHours = numberOfMinutes / 60;
+        long numberOfDays = numberOfHours / 24;
+        long numberOfWeeks = numberOfDays / 7;
+        long numberOfYears = numberOfDays / 365;
+
+        long remainingWeeks = (long)(numberOfWeeks % 52.1429);
+        long remainingDays = (showWeeks ? (numberOfDays % 7) : (numberOfDays % 365));
+        long remainingHours = numberOfHours % 24;
+        long remainingMinutes = numberOfMinutes % 60;
+        long remainingSeconds = numberOfSeconds % 60;
+
+        boolean showingYears = (numberOfYears > 0);
+        if (showingYears)
+            value.append(String.format(strTimeDeltaFormat, numberOfYears, strYears));
+
+        boolean showingWeeks = (showWeeks && numberOfWeeks > 0);
+        if (showingWeeks) {
+            value.append((showingYears ? strSpace : strEmpty));
+            value.append(String.format(strTimeDeltaFormat, remainingWeeks, strWeeks));
+        }
+
+        boolean showingDays = (remainingDays > 0);
+        if (showingDays) {
+            value.append((showingYears || showingWeeks ? strSpace : strEmpty));
+            value.append(String.format(strTimeDeltaFormat, remainingDays, strDays));
+        }
+
+        boolean showingHours = (!showingYears && !showingWeeks && remainingHours > 0);
+        boolean showingMinutes = (!showingDays && !showingWeeks && !showingYears && remainingMinutes > 0);
+        boolean showingSeconds = (showSeconds && !showingDays && !showingWeeks && !showingYears && (remainingSeconds > 0));
+
+        if (showHours || !showingYears && !showingWeeks && remainingDays < 2)
+        {
+            if (showingHours) {
+                value.append((showingYears || showingWeeks || showingDays ? strSpace : strEmpty));
+                value.append(String.format(strTimeDeltaFormat, remainingHours, strHours));
+            }
+
+            if (showingMinutes) {
+                value.append((showingYears || showingWeeks || showingDays || showingHours ? strSpace : strEmpty));
+                value.append(String.format(strTimeDeltaFormat, remainingMinutes, strMinutes));
+            }
+
+            if (showingSeconds) {
+                value.append((showingHours || showingMinutes ? strSpace : strEmpty));
+                value.append(String.format(strTimeDeltaFormat, remainingSeconds, strSeconds));
+            }
+        }
+
+        if (!showingSeconds && !showingMinutes && !showingHours && !showingDays && !showingWeeks && !showingYears)
+        {
+            if (showSeconds)
+                value.append(String.format(strTimeDeltaFormat, "0", strSeconds));
+            else value.append(String.format(strTimeDeltaFormat, "1", strMinutes));
+        }
+
+        TimeDisplayText text = new TimeDisplayText(value.toString().trim(), units, suffix);
+        text.setRawValue(timeInMillis);
+        return text;
+    }
+
+    @SuppressWarnings("ConstantConditions")
+    public TimeDisplayText timeDeltaLongDisplayString0(long timeSpan1, long timeSpan2, boolean showWeeks, boolean showHours, boolean showSeconds)
     {
         String value = strEmpty;
         String units = strEmpty;

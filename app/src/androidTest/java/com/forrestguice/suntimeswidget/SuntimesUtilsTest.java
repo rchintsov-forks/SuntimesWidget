@@ -25,6 +25,7 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.RenamingDelegatingContext;
 import android.text.style.ImageSpan;
+import android.util.Log;
 
 import com.forrestguice.suntimeswidget.settings.AppSettings;
 import com.forrestguice.suntimeswidget.settings.WidgetSettings;
@@ -394,6 +395,46 @@ public class SuntimesUtilsTest
         ImageSpan span4 = SuntimesUtils.createImageSpan(span3);
         assertTrue("createImageSpan(ImageSpan) should create a new object!", span4 != span3);
         assertTrue("createImageSpan(ImageSpan) should have the same drawable!", span4.getDrawable().equals(span3.getDrawable()));
+    }
+
+    @Test
+    public void test_timeDeltaLongDisplayStringPerf()
+    {
+        long date = Calendar.getInstance().getTimeInMillis();
+        long timeDelta = 1439 * MINUTE;
+        long bench_start, bench_end;
+        int c = 10000, d = 10;
+        long a0 = 0, a1 = 0, a2 = 0;
+        double ms0, ms1, ms2;
+        SuntimesUtils.TimeDisplayText text0 = null, text1 = null;
+
+        for (int j=0; j<d; j++)
+        {
+            for (int i = 0; i < c; i++) {
+                bench_start = System.nanoTime();
+                text0 = utils.timeDeltaLongDisplayString0(date, date + timeDelta, true, true, true);
+                bench_end = System.nanoTime();
+                a0 += (bench_end - bench_start);
+            }
+            a0 = (long) (a0 / (float) c);
+            ms0 = (a0 / 1000000.0);
+
+            for (int i = 0; i < c; i++) {
+                bench_start = System.nanoTime();
+                text1 = utils.timeDeltaLongDisplayString1(date, date + timeDelta, true, true, true);
+                bench_end = System.nanoTime();
+                a1 += (bench_end - bench_start);
+            }
+            a1 = (long) (a1 / (float) c);
+            ms1 = (a1 / 1000000.0);
+
+            Log.d("BENCH", "[0] " + ms0 + ", [1] " + ms1 + " ms :: " + ((a1 - a0) / 1000000.0));
+            a2 += (a1 - a0);
+        }
+        a2 = (long) (a2 / (float) d);
+        ms2 = (a2 / 1000000.0);
+        Log.d("BENCH", "average difference of " + ms2 + " ms");
+        assertTrue("values should match", text0.toString().equals(text1.toString()));
     }
 
 }
