@@ -162,14 +162,14 @@
     <string name="units_feet">fot</string>
     <string name="units_feet_short">ft</string>
     <!--<plurals name="units_feet_long">
-      <item quantity="one">%d foot</item>
-      <item quantity="other">%d feet</item>
+      <item quantity="one">%d fot</item>
+      <item quantity="other">%d fot</item>
     </plurals>-->
     <string name="units_meters">meter</string>
     <string name="units_meters_short">m</string>
     <!--<plurals name="units_meters_long">
       <item quantity="one">%d meter</item>
-      <item quantity="other">%d meters</item>
+      <item quantity="other">%d meter</item>
     </plurals>-->
 
     <!--
@@ -459,37 +459,37 @@
     <string name="configLabel_themeColorNoon">Middagfarge:</string>      <!-- color label -->
     <string name="configHint_themeColorNoon">#FFFFFFFF</string>         <!-- color hint -->
 
-    <string name="configLabel_themeColorFill">Fill:</string>         <!-- color label -->
+    <string name="configLabel_themeColorFill">Fyll:</string>         <!-- color label -->
     <string name="configHint_themeColorFill">#FFFFFFFF</string>        <!-- color hint -->
 
-    <string name="configLabel_themeColorBorder">Border:</string>         <!-- color label -->
+    <string name="configLabel_themeColorBorder">Ramme:</string>         <!-- color label -->
     <string name="configHint_themeColorBorder">#FFFFFFFF</string>        <!-- color hint -->
 
-    <string name="configLabel_themeBorderWidthRiseSet">Border Width (rise/set):</string>  <!-- size label -->
+    <string name="configLabel_themeBorderWidthRiseSet">Rammebredde (oppgang/nedgang):</string>  <!-- size label -->
     <string name="configHint_themeBorderWidthRiseSet">2</string>                          <!-- size hint -->
-    <string name="configLabel_themeBorderWidthNoon">Border Width (noon):</string>         <!-- size label -->
+    <string name="configLabel_themeBorderWidthNoon">Rammebredde (middag):</string>         <!-- size label -->
     <string name="configHint_themeBorderWidthNoon">3</string>                             <!-- size hint -->
 
-    <string name="configLabel_themeColorSuffix">Suffix Colour:</string>   <!-- color label -->
+    <string name="configLabel_themeColorSuffix">Suffiksfarge:</string>   <!-- color label -->
     <string name="configHint_themeColorSuffix">#FFFFFFFF</string>        <!-- color hint -->
 
-    <string name="configLabel_themeColorTime">Text Colour2:</string>      <!-- color label -->
+    <string name="configLabel_themeColorTime">Tekstfarge2:</string>      <!-- color label -->
     <string name="configHint_themeColorTime">#FFFFFFFF</string>          <!-- color hint -->
 
-    <string name="configLabel_themeSizeTitle">Title Size:</string>  <!-- edit label -->
+    <string name="configLabel_themeSizeTitle">Tittelstørrelse:</string>  <!-- edit label -->
     <string name="configHint_themeSizeTitle">14</string>                 <!-- edit hint -->
 
-    <string name="configLabel_themeBoldTitle">Bold</string>          <!-- checkbox label -->
+    <string name="configLabel_themeBoldTitle">Fet</string>          <!-- checkbox label -->
 
-    <string name="configLabel_themeSizeText">Text Size:</string>    <!-- edit label -->
+    <string name="configLabel_themeSizeText">Tekststørrelse:</string>    <!-- edit label -->
     <string name="configHint_themeSizeText">10</string>                  <!-- edit hint -->
 
-    <string name="configLabel_themeSizeTime">Time Size:</string>    <!-- edit label -->
+    <string name="configLabel_themeSizeTime">Tidsstørrelse:</string>    <!-- edit label -->
     <string name="configHint_themeSizeTime">12</string>                  <!-- edit hint -->
 
-    <string name="configLabel_themeBoldTime">Bold</string>          <!-- checkbox label -->
+    <string name="configLabel_themeBoldTime">Fet</string>          <!-- checkbox label -->
 
-    <string name="configLabel_themeSizeSuffix">Suffix Size:</string> <!-- edit label -->
+    <string name="configLabel_themeSizeSuffix">Suffiksstørrelse:</string> <!-- edit label -->
     <string name="configHint_themeSizeSuffix">8</string>                  <!-- edit hint -->
 
     <string name="configLabel_themePadding">Padding:</string>            <!-- edit label -->
@@ -526,6 +526,7 @@
     <string name="configLabel_widgetList_itemSummaryPattern"><xliff:g id="widgetType">%1$s</xliff:g> [<xliff:g id="datasource">%2$s</xliff:g>]</string>
     <string name="configLabel_widgetListHelp_title">Hjelp</string>               <!-- always the first item in the widgetList -->
     <string name="configLabel_widgetListHelp_summary">Vis modulhjelp</string>
+    <string name="configLabel_widgetList_emptyMsg">Ingen moduler</string>          <!-- a label that is displayed in place of an empty listview -->
 
     <!-- App Setting: Places -->
     <string name="configLabel_places">Steder</string>                           <!-- group title -->
@@ -705,6 +706,7 @@
         <item>Katalansk</item>
         <item>Baskisk</item>
         <item>Norsk</item>
+        <item>Tradisjonell kinesisk</item>
     </string-array>
 
     <!-- position formats -->
@@ -908,14 +910,16 @@
         Source code available under GPLv3.
     ]]></string>
     <string name="app_legal2"><![CDATA[
-        <b>Translations:</b><br/>
+        <b>Oversettelser:</b><br/>
         German translation by Henrik "HerHde" Hüttemann and Wolkenschieber. <br />
         Polish and Esperanto translation by Verdulo. <br />
         French translation by Jej. <br />
         Hungarian translation by Erci. <br />
         Spanish and Catalan translation by <a href=https://github.com/Raulvo>Raulvo</a>. <br />
         Basque translation by beriain. <br />
-        Norwegian translation by FTno.
+        Norwegian translation by FTno. <br />
+        Italian translation by Matteo Caoduro. <br />
+        Traditional Chinese translation by <a href=https://github.com/pggdt>ft42</a>.
     ]]></string>
     <string name="app_legal3"><![CDATA[ <b>Libraries:</b><br/> ]]>
     <![CDATA[ github.com/MenoData/Time4A ]]> <![CDATA[ <br /> ]]>
@@ -1005,9 +1009,15 @@
         The fully qualified class name of the Activity to be launched.<br/>
     ]]></string>
     <string name="help_widgetlist"><![CDATA[
-          To <b>add a new widget</b> you must navigate to the home screen.<br/><br/>
-          To <b>reconfigure an existing widget</b> you can select from the following list.<br/>
+          For å <b>legge til</b> eller <b>fjerne</b> en modul må du navigere til startskjermen.<br/><br/>
+          For å <b>stille inn en eksisterende modul på nytt</b> kan du velge fra den følgende listen.<br/>
     ]]></string>
+    <string name="help_themelist">
+          [Icon Add] Legg til et nytt tema eller [Icon Copy] kopier fra et eksisterende tema.\n
+          \n
+          [Icon Edit] Rediger eller [Icon Delete] slett temaer.\n
+          [Icon Default] Standardtemaer kan ikke endres.
+    </string> <!-- text explains themelist actions/icons; [Icon tags] are substituted at runtime (should remain unaltered)  -->
 
     <string name="privacy_policy"><![CDATA[<b>Privacy:</b><br/>Suntimes does not collect, store, or transmit personal user data. It contains <b>no advertising</b>, <b>no analytics</b>, <b>no trackers</b>, and <b>no unnecessary permissions</b>. <br/><br/>The app is configured from location data. This information (and other configuration data used by the app) is stored locally and does not leave the device.<br/><br/><xliff:g id="permissionsExplained">%1$s</xliff:g>]]></string> <!-- TODO -->
     <string name="privacy_permission_location"><![CDATA[Suntimes uses the <b>location</b> permission to determine your current longitude and latitude.<br/><br/>This permission is optional; the location is manually configured by default.]]></string> <!-- TODO -->

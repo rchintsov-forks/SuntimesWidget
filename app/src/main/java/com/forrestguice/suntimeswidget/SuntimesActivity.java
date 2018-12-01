@@ -18,6 +18,7 @@
 
 package com.forrestguice.suntimeswidget;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -143,6 +144,8 @@ public class SuntimesActivity extends AppCompatActivity
     protected SuntimesMoonData dataset3;
 
     private int color_textTimeDelta;
+    private int resID_noonIcon;
+    private int resID_buttonPressColor;
 
     // clock views
     private TextView txt_time;
@@ -242,10 +245,7 @@ public class SuntimesActivity extends AppCompatActivity
     public void onCreate(Bundle savedState)
     {
         Context context = SuntimesActivity.this;
-        appTheme = AppSettings.loadThemePref(this);
-        setTheme(appThemeResID = AppSettings.themePrefToStyleId(this, appTheme, null));
-        GetFixUI.themeIcons(this);
-
+        initTheme();
         super.onCreate(savedState);
         setResult(RESULT_CANCELED);
 
@@ -266,6 +266,20 @@ public class SuntimesActivity extends AppCompatActivity
             intent.setData(null);
             configLocation(data);
         }
+    }
+
+    private void initTheme()
+    {
+        appTheme = AppSettings.loadThemePref(this);
+        setTheme(appThemeResID = AppSettings.themePrefToStyleId(this, appTheme, null));
+
+        int[] attrs = new int[] { R.attr.sunnoonIcon, R.attr.buttonPressColor };
+        TypedArray a = obtainStyledAttributes(attrs);
+        resID_noonIcon = a.getResourceId(0, R.drawable.ic_noon_large);
+        resID_buttonPressColor = a.getResourceId(1, R.color.btn_tint_pressed_dark);
+        a.recycle();
+
+        GetFixUI.themeIcons(this);
     }
 
     private void initLocale( Context context )
@@ -1019,7 +1033,7 @@ public class SuntimesActivity extends AppCompatActivity
                 public boolean onTouch(View view, MotionEvent motionEvent)
                 {
                     if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                        btn_flipperNext_today.setColorFilter(ContextCompat.getColor(SuntimesActivity.this, R.color.btn_tint_pressed));
+                        btn_flipperNext_today.setColorFilter(ContextCompat.getColor(SuntimesActivity.this, resID_buttonPressColor));
                     } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
                         btn_flipperNext_today.setColorFilter(null);
                     }
@@ -1112,7 +1126,7 @@ public class SuntimesActivity extends AppCompatActivity
                 {
                     if (motionEvent.getAction() == MotionEvent.ACTION_DOWN)
                     {
-                        btn_flipperPrev_tomorrow.setColorFilter(ContextCompat.getColor(SuntimesActivity.this, R.color.btn_tint_pressed));
+                        btn_flipperPrev_tomorrow.setColorFilter(ContextCompat.getColor(SuntimesActivity.this, resID_buttonPressColor));
                     } else if (motionEvent.getAction() == MotionEvent.ACTION_UP)
                     {
                         btn_flipperPrev_tomorrow.setColorFilter(null);
@@ -2567,7 +2581,7 @@ public class SuntimesActivity extends AppCompatActivity
     {
         Resources resources = getResources();
         int iconWidth = (int)resources.getDimension(R.dimen.sunIconLarge_width);
-        int iconHeight = ((note.noteIconResource == R.drawable.ic_noon_large) ? iconWidth : (int)resources.getDimension(R.dimen.sunIconLarge_height));
+        int iconHeight = ((note.noteIconResource == resID_noonIcon) ? iconWidth : (int)resources.getDimension(R.dimen.sunIconLarge_height));
 
         ViewGroup.LayoutParams iconParams = icon.getLayoutParams();
         iconParams.width = iconWidth;
@@ -2715,7 +2729,7 @@ public class SuntimesActivity extends AppCompatActivity
         protected String contentDescription = null;
         protected View parentView = null;
 
-        public void initWarning(Context context, View view, String msg)
+        public void initWarning(@NonNull Context context, View view, String msg)
         {
             this.parentView = view;
             ImageSpan warningIcon = SuntimesUtils.createWarningSpan(context, txt_date.getTextSize());
@@ -2726,6 +2740,28 @@ public class SuntimesActivity extends AppCompatActivity
             snackbar = Snackbar.make(card_flipper, message, Snackbar.LENGTH_INDEFINITE);
             snackbar.addCallback(snackbarListener);
             setContentDescription(contentDescription);
+            themeWarning(context, snackbar);
+        }
+
+        @SuppressLint("ResourceType")
+        private void themeWarning(@NonNull Context context, @NonNull Snackbar snackbarWarning)
+        {
+            int[] colorAttrs = { R.attr.snackbar_textColor, R.attr.snackbar_accentColor, R.attr.snackbar_backgroundColor };
+            TypedArray a = context.obtainStyledAttributes(colorAttrs);
+            int textColor = ContextCompat.getColor(context, a.getResourceId(0, android.R.color.primary_text_dark));
+            int accentColor = ContextCompat.getColor(context, a.getResourceId(1, R.color.text_accent_dark));
+            int backgroundColor = ContextCompat.getColor(context, a.getResourceId(2, R.color.card_bg_dark));
+            a.recycle();
+
+            View snackbarView = snackbarWarning.getView();
+            snackbarView.setBackgroundColor(backgroundColor);
+            snackbarWarning.setActionTextColor(accentColor);
+
+            TextView snackbarText = (TextView)snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+            if (snackbarText != null) {
+                snackbarText.setTextColor(textColor);
+                snackbarText.setMaxLines(5);
+            }
         }
 
         private Snackbar.Callback snackbarListener = new Snackbar.Callback()
