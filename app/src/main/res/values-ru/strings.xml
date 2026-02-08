@@ -94,10 +94,10 @@
     -->
     <string name="timezoneField"><xliff:g id="timezone" example="US/Mountain">%1$s</xliff:g> <xliff:g id="dstTag">[d]</xliff:g><xliff:g id="warningTag">[w]</xliff:g></string>
     <string name="timezoneWarning"><xliff:g id="warningTag">[w]</xliff:g>  Часовой пояс может не соответствовать текущему местоположению</string>  <!-- snackbar message -->
-    <string name="timezoneWarningNote"><xliff:g id="tzID">%s</xliff:g> (<xliff:g id="timeSpan">%s</xliff:g>) отличается от местного среднего солнечного времени на <xliff:g id="locationName">%s</xliff:g></string>
+    <string name="timezoneWarningNote">пояс <xliff:g id="tzID">%s</xliff:g> отличается от местного среднего солнечного времени на <xliff:g id="timeSpan">%s</xliff:g> в г. <xliff:g id="locationName">%s</xliff:g></string>
     <string name="timezoneExtraDST"><xliff:g id="dstTag">[d]</xliff:g> <xliff:g id="dstOffset" example="+1h">%1$s</xliff:g> летнее время</string>  <!-- timezone dialog label -->
     <string name="timezoneExtraDST_short"><xliff:g id="dstOffset" example="+1h">%1$s</xliff:g> л.вр.</string>  <!-- timezone dialog label -->
-    <string name="timezoneExtraApparentSolar"><xliff:g id="dstTag">[d]</xliff:g> <xliff:g id="dstOffset" example="+8m">%1$s</xliff:g> уравнение времени</string>  <!-- timezone dialog label -->
+    <string name="timezoneExtraApparentSolar"><xliff:g id="dstTag">[d]</xliff:g> <xliff:g id="dstOffset" example="+8m">%1$s</xliff:g> по уравнению времени</string>  <!-- timezone dialog label -->
     <string name="timezoneExtraApparentSolar_short"><xliff:g id="dstOffset" example="+8m">%1$s</xliff:g> ур.вр.</string>  <!-- timezone dialog label -->
 
     <!-- Field: date
@@ -193,13 +193,13 @@
          The note body text; appears next to the prefix (layout/info_time_note.xml)
     -->
     <string name="until_astroTwilight">астроном. сумерек</string>
-    <string name="until_civilTwilight">гражданск. сумерек</string>
+    <string name="until_civilTwilight">гражданских сумерек</string>
     <string name="until_nauticalTwilight">навигац. сумерек</string>
     <string name="until_sunrise">восхода солнца</string>
     <string name="until_noon">солнечного полудня</string>
     <string name="until_midnight">солнечной полуночи</string>
     <string name="until_sunset">захода солнца</string>
-    <string name="untilEnd_civilTwilight">гражданск. сумерек</string>
+    <string name="untilEnd_civilTwilight">гражданских сумерек</string>
     <string name="untilEnd_nauticalTwilight">навигац. сумерек</string>
     <string name="untilEnd_astroTwilight">астроном. сумерек</string>
     <string name="until_goldhour">золотого часа</string>
@@ -417,7 +417,7 @@
     <string name="timeMode_official">Фактическое время</string>               <!-- setting -->
     <string name="timeMode_civil_short">Гражданские сум.</string>                  <!-- setting -->
     <string name="timeMode_civil">Гражданские сумерки</string>               <!-- setting -->
-    <string name="timeMode_nautical_short">Навигационные сум.</string>            <!-- setting -->
+    <string name="timeMode_nautical_short">Навигацион. сум.</string>            <!-- setting -->
     <string name="timeMode_nautical">Навигационные сумерки</string>         <!-- setting -->
     <string name="timeMode_astronomical_short">Астрономич. сум.</string>    <!-- setting -->
     <string name="timeMode_astronomical">Астрономические сумерки</string> <!-- setting -->
@@ -532,10 +532,10 @@
     <string name="widgetMode3x2_worldmap">@string/configAction_worldMap</string>     <!-- setting -->
 
     <string name="widgetMode_sunPosMap_simplerectangular">Карта-схема</string>  <!-- setting -->
-    <string name="widgetMode_sunPosMap_simpleazimuthal">Полярная [Сев. п.]</string>     <!-- setting -->
-    <string name="widgetMode_sunPosMap_simpleazimuthal_south">Полярная [Южн. п.]</string>     <!-- setting -->
-    <string name="widgetMode_sunPosMap_bluemarble">Спутниковая</string>    <!-- setting -->
-    <string name="widgetMode_sunPosMap_simpleazimuthal_location">Азимутальная равноудаленная</string>     <!-- setting -->
+    <string name="widgetMode_sunPosMap_simpleazimuthal">Полярная (Северный п.)</string>     <!-- setting -->
+    <string name="widgetMode_sunPosMap_simpleazimuthal_south">Полярная (Южный п.)</string>     <!-- setting -->
+    <string name="widgetMode_sunPosMap_bluemarble">Спутниковое фото</string>    <!-- setting -->
+    <string name="widgetMode_sunPosMap_simpleazimuthal_location">Азимутальн. равноудал.</string>     <!-- setting -->
 
     <string name="worldmap_projection_equirectangular">Равноудаленная прямоугольная</string>
     <string name="worldmap_projection_equiazimuthal">Равноудаленная азимутальная</string>
@@ -604,7 +604,7 @@
     <string name="configAction_savePlace">Сохранить</string>         <!-- button (contentDescription) -->
 
     <!-- Widget Setting: timezone -->
-    <string name="timezoneMode_standard">Согласно стандарту (выбор)</string>                       <!-- setting -->
+    <string name="timezoneMode_standard">Согласно стандарту:</string>                       <!-- setting -->
     <string name="timezoneMode_current">Системный часовой пояс</string>               <!-- setting -->
     <string name="timezoneMode_custom">Пользовательский</string>                    <!-- setting -->
 
@@ -620,7 +620,7 @@
     <string name="configLabel_timezone">Часовой пояс</string>             <!-- group title -->
     <string name="configLabel_timezone_mode">Режим:</string>                     <!-- spinner label -->
     <string name="configLabel_timezone_custom">Часовой пояс:</string>              <!-- spinner label -->
-    <string name="configLabel_timezone_standard">Согласно стандарту (выбор)</string>                   <!-- spinner label -->
+    <string name="configLabel_timezone_standard">Согласно стандарту:</string>                   <!-- spinner label -->
     <string name="configLabel_timezone_fromapp">Использовать часовой пояс приложения</string>                  <!-- checkbox text -->
 
     <!-- Widget Setting: timeFormat mode -->
@@ -977,7 +977,7 @@
     <string name="configAction_deleteEvent">Удалить</string>           <!-- button (contentDescription) -->
     <string name="configAction_clearEvents">Удалить все</string>           <!-- button (contentDescription) -->
 
-    <string name="configAction_addEvent_sunEvent">Добавить (высота солнца)</string>           <!-- button (contentDescription) -->
+    <string name="configAction_addEvent_sunEvent">Добавить (позиция солнца)</string>           <!-- button (contentDescription) -->
     <string name="configAction_addEvent_shadowEvent">Добавить (длина тени)</string>           <!-- button (contentDescription) -->
 
     <string name="configAction_importEvents">@string/configAction_import</string>           <!-- button (contentDescription) -->
@@ -1094,7 +1094,7 @@
     <string name="alarmOption_action_label"><xliff:g id="icon">[icon]</xliff:g> <xliff:g id="name">%1$s</xliff:g></string>  <!-- action label format -->
     <string name="alarmOption_solarevent_none">по системному времени</string>          <!-- ringtone label (none) -->
 
-    <string name="alarmOption_repeat">Повторение</string>                <!-- checkbox text; an alarm that repeats -->
+    <string name="alarmOption_repeat">Повторять по дням</string>                <!-- checkbox text; an alarm that repeats -->
     <string name="alarmOption_repeat_none">Без повторений</string>         <!-- label text; an alarm that does not repeat (occurs once) -->
     <string name="alarmOption_repeat_all">Ежедневно</string>         <!-- label text; an alarm that repeats every day -->
 
@@ -1105,7 +1105,7 @@
     <string name="deletealarm_toast_success"><xliff:g id="type" example="Notification">%1$s</xliff:g> в <xliff:g id="time">%2$s</xliff:g> (<xliff:g id="event">%3$s</xliff:g>) удален.</string> <!-- toast msg -->
     <string name="deletealarm_toast_success1"><xliff:g id="type" example="Notification">%1$s</xliff:g> удален</string> <!-- toast msg -->
 
-    <string name="discardchanges_dialog_message">Есть несохраненные изменения, что с ними сделать?</string>      <!-- dialog message -->
+    <string name="discardchanges_dialog_message">Есть несохраненные изменения, что с ними делать?</string>      <!-- dialog message -->
     <string name="discardchanges_dialog_ok">Отказаться</string>                              <!-- button -->
     <string name="discardchanges_dialog_cancel">Назад</string>                           <!-- button -->
     <string name="discardchanges_dialog_neutral">Сохранить</string>                            <!-- button -->
@@ -1117,7 +1117,7 @@
     <string name="clearalarms_toast_success">Все будильники удалены</string> <!-- toast msg -->
 
     <string name="importalarms_title_warning">Предупреждение об импорте</string> <!-- dialog title -->
-    <string name="importalarms_msg_warning">Импортированные будильники могут вернуть некоторые настройки к значениям по умолчанию.\n\nВозможно, вам потребуется (пере)выбрать звуки и действия.</string> <!-- toast msg -->
+    <string name="importalarms_msg_warning">Импортированные будильники могут вернуть некоторые настройки к значениям по умолчанию.\n\nВозможно, вам потребуется установить звуки уведомлений и действия заново.</string> <!-- toast msg -->
     <string name="importalarms_toast_success">Импортировано %s будильников</string> <!-- toast msg -->
     <plurals name="alarmPlural">
         <item quantity="one">%d будильник</item>
@@ -1129,7 +1129,7 @@
     <string name="configLabel_alarms_dismissChallenge">Задание для отключения</string>            <!-- pref title -->
     <string name="alarmDismiss_none">Нет заданий</string>                         <!-- alarm setting -->
     <string name="alarmDismiss_none_long">Без заданий</string>            <!-- chip label -->
-    <string name="alarmDismiss_math">Простые матем. задания</string>           <!-- alarm setting -->
+    <string name="alarmDismiss_math">Простые матем. задачи</string>           <!-- alarm setting -->
 
     <string name="alarmlabel_dialog_title">Название</string>        <!-- dialog title -->
     <string name="alarmlabel_dialog_ok">Сохранить</string>        <!-- button -->
@@ -1184,14 +1184,14 @@
     <string name="configLabel_alarms_notifications_fullscreen_summary1">Управляет разрешением на полноэкранные уведомления</string>
     <string name="notificationsWarning1"><xliff:g id="warningTag">[w]</xliff:g> Полноэкранные уведомления выключены. Будильник может не отображаться поверх экрана блокировки.</string>  <!-- snackbar message -->
 
-    <string name="configLabel_alarms_bootcompleted">Загрузка завершена</string>
+    <string name="configLabel_alarms_bootcompleted">Завершение загрузки (выполнить)</string>
     <string name="configLabel_alarms_bootcompleted_summary">Будильники автоматически запланируются через несколько минут после перезагрузки.\n\n<xliff:g id="_info" example="last run: never">%1$s</xliff:g></string>
     <string name="configLabel_alarms_bootcompleted_info">Последний запуск: <xliff:g id="timestamp" example="never">%1$s</xliff:g>,\nчерез <xliff:g id="time" example="30s">%2$s</xliff:g> после загрузки (заняло <xliff:g id="time" example="10s">%3$s</xliff:g>)</string>
     <string name="configLabel_alarms_bootcompleted_info_never">Никогда</string>
     <string name="configLabel_alarms_bootcompleted_action_confirm">Включить все будильники и уведомления?</string>
     <string name="configLabel_alarms_bootcompleted_action_message">Включение будильников и уведомлений…</string>
 
-    <string name="configLabel_alarms_bootcompleted_delay">Загрузка завершена (задержка)</string>
+    <string name="configLabel_alarms_bootcompleted_delay">Задержка завершения загрузки</string>
     <string name="configLabel_alarms_bootcompleted_delay_summary">%s</string>
 
     <string name="configLabel_alarms_background_action_message">%s выполняет работу в фоновом режиме</string>    <!-- message shown whenever alarm foreground service does periodic work -->
@@ -1228,7 +1228,7 @@
 
     <string name="configLabel_alarmFullscreen">Полноэкранный режим</string>            <!-- group title -->
     <string name="configLabel_alarms_brightMode">Яркие будильники</string>
-    <string name="configLabel_alarms_brightMode_summary">Полноэкранные будильники сначала темные, затем постепенно меняют цвет и становятся ярче</string>
+    <string name="configLabel_alarms_brightMode_summary">Будильник, запущенный на весь экран, сначала темный, затем постепенно меняет цвет и становится ярче</string>
 
     <string name="configLabel_alarms_brightMode_fadein">Постепенно увеличивать яркость</string>
     <string name="configLabel_alarms_brightMode_fadein_summary"><xliff:g id="timePeriod" example="60 seconds">%s</xliff:g></string>
@@ -1305,7 +1305,7 @@
     <string name="configLabel_alarms_showlauncher">Показывать ярлык</string>
     <string name="configLabel_alarms_showlauncher_summary">Показывать ярлык приложения будильников Suntimes Alarms в общем списке приложений</string>
 
-    <string name="configLabel_alarms_poweroffalarms">Будильник при выключенном питании</string>
+    <string name="configLabel_alarms_poweroffalarms">Будильник при выкл. питании</string>
     <string name="configLabel_alarms_poweroffalarms_summary">Пробуждать устройство из состояния выключения.\npackage: <xliff:g id="packageName">%s</xliff:g></string>
 
     <string name="configLabel_alarms_clearall">Удалить все будильники</string>
@@ -1375,7 +1375,7 @@
     <string name="configLabel_bedtime_zenrule_name">Режим сна (Suntimes)</string>    <!-- do-not-disturb rule name; appears in global-dnd-settings/schedule -->
 
     <string name="configAction_dnd_allow">Разрешить доступ</string>              <!-- button label when requesting permission -->
-    <string name="configLabel_dnd">Не беспокоить</string>              <!-- textview text (next line shows time) -->
+    <string name="configLabel_dnd">Режим «Не беспокоить»</string>              <!-- textview text (next line shows time) -->
     <string name="configLabel_dnd_disabled">Не беспокоить: выключено</string>         <!-- do-not-disturb menu item -->
     <string name="configLabel_dnd_priority">Не беспокоить: только приоритетные</string>    <!-- do-not-disturb menu item -->
     <string name="configLabel_dnd_alarms">Не беспокоить: только будильники</string>        <!-- do-not-disturb menu item -->
@@ -1401,7 +1401,7 @@
     <string name="configLabel_widgetList_emptyMsg">Виджетов нет</string>          <!-- a label that is displayed in place of an empty listview -->
 
     <string name="configAction_createBackup">Создать резервную копию</string>    <!-- menu item, dialog title, progress text -->  <!-- export all -->
-    <string name="configAction_restoreBackup">Восстановить из резервной копии</string>    <!-- menu item, dialog title, progress text -->  <!-- import all -->
+    <string name="configAction_restoreBackup">Восстановить из рез. копии</string>    <!-- menu item, dialog title, progress text -->  <!-- import all -->
     <string name="restorebackup_dialog_item_alarmitems">Будильники</string>
     <string name="restorebackup_dialog_item_appsettings">Настройки приложения</string>
     <string name="restorebackup_dialog_item_colors">Цвета</string>
@@ -1558,7 +1558,7 @@
     <string name="configLabel_ui_showmoon_noon_summary">Показывать лунный полдень и лунную полночь на экране луны</string>
 
     <!-- App Setting: Moon Phase Columns -->
-    <string name="configLabel_ui_showmoon_phase_columns">Столбцы (фазы)</string>
+    <string name="configLabel_ui_showmoon_phase_columns">Столбцы (количество фаз)</string>
 
         <!-- App Setting: Moon Phase Date -->
     <string name="configLabel_ui_showMoonPhaseDate">Показывать даты фаз</string>
@@ -1570,7 +1570,7 @@
 
     <!-- App Setting: Show Equinox / Solstice -->
     <string name="configLabel_ui_showEquinox">Солнцестояние и равноденствие</string>
-    <string name="configLabel_ui_showEquinox_summary">Показывать время до солнцестояния или равноденствия</string>
+    <string name="configLabel_ui_showEquinox_summary">Показывать время до солнцестояния и равноденствия</string>
 
     <!-- App Setting: Show Equinox / Solstice (date) -->
     <string name="configLabel_ui_showEquinoxDate">Даты солнцестояния / равноденствия</string>
@@ -1969,8 +1969,8 @@
 
     <string name="graph_option_crosshair">Перекрестие</string>
     <string name="graph_option_grid">Сетка</string>
-    <string name="graph_option_labels">Подписи</string>
-    <string name="graph_option_axis">Оси</string>
+    <string name="graph_option_labels">Метки осей</string>
+    <string name="graph_option_axis">Осевые линии</string>
     <string name="graph_option_points">Точки</string>
     <string name="graph_option_twilights">Сумерки</string>
     <string name="graph_option_seasons">Сезоны</string>
@@ -2280,6 +2280,9 @@
         Приложение %s доступно бесплатно. Но если оно оказалось для вас полезным, вы можете
         <a href="%2$s">поддержать проект любой суммой</a>.
     ]]></string>
+
+    <string name="app_license_about">Suntimes — бесплатная программа с открытым исходным кодом.</string>   <!-- displayed by welcome dialog -->
+
     <string name="app_legal1"><![CDATA[
         <b>Исходный код:</b><br />
         Copyright &#169 2014-2026 Forrest Guice <br />
@@ -2289,7 +2292,7 @@
     <string name="app_legal2"><![CDATA[<b>Переводы:</b><br/>]]><xliff:g id="locale_credits">%1$s</xliff:g></string>
     <string name="translationCreditsFormat"><![CDATA[&#8226;&nbsp;<b><xliff:g id="languageName">%1$s</xliff:g></b> от <xliff:g id="authorList">%2$s</xliff:g>.]]></string>
     <string name="authorListFormat_i"><xliff:g id="authorName1">%1$s</xliff:g>, <xliff:g id="authorName2">%2$s</xliff:g></string>  <!-- e.g. "name1, name2, name3, ..." -->
-    <string name="authorListFormat_n"><xliff:g id="authorListFormat_i">%1$s</xliff:g>, and <xliff:g id="authorName">%2$s</xliff:g></string>  <!-- e.g. "..., and nameN" -->
+    <string name="authorListFormat_n"><xliff:g id="authorListFormat_i">%1$s</xliff:g> и <xliff:g id="authorName">%2$s</xliff:g></string>  <!-- e.g. "..., and nameN" -->
     <string name="creditsTab">Благодарности</string>
 
     <string name="app_legal3"><![CDATA[ <b>Сторонние библиотеки:</b><br/> ]]><xliff:g id="app_libraries">%1$s</xliff:g></string>
@@ -2302,6 +2305,9 @@
         <item><![CDATA[ github.com/rubensousa/GravitySnapHelper ]]></item>
     </string-array>
     <string name="app_about_media"><![CDATA[ <b>Медиа:</b><br/> ]]><xliff:g id="app_media">%1$s</xliff:g></string>
+    <string-array name="app_media">
+        <item><![CDATA[ Обсерватория Земли NASA. Спутниковая фотография: Next Generation. ]]></item>
+    </string-array>
 
     <!-- Dialog: Welcome / Initial setup -->
     <string name="welcome_action_skip">Пропустить</string>
@@ -2407,13 +2413,13 @@
 
     <string name="help_eventlist"><![CDATA[
           [Icon OK] Выберите пользовательское событие\n
-          [Icon Add] Добавить, [Icon Edit] изменить или [Icon Delete] удалить пользовательские события\n
-          \nПользовательские события можно показывать в приложении, на виджетах главного экрана или использовать для планирования будильников и уведомлений\n
-          [Icon View] Отмеченные события показываются в приложении
+          [Icon Add] Добавляйте, [Icon Edit] изменяйте или [Icon Delete] удаляйте пользовательские события.\n
+          \nПользовательские события можно показывать в приложении, на виджетах главного экрана или использовать для планирования будильников и уведомлений.\n
+          Отмеченные значком [Icon View] события показываются в приложении.
     ]]></string>
 
     <string name="help_alarms_bedtime"><![CDATA[
-           [Icon Bedtime] Режим сна можно использовать для включения режима <b>Не беспокоить</b> на время сна<br/>
+           [Icon Bedtime] Режим сна можно использовать для включения режима <b>«Не беспокоить»</b> на время сна<br/>
            <br/>
            [Icon Reminder] Показать уведомление-напоминание перед временем сна<br/>
            [Icon Alarm] Запланировать будильник пробуждения на следующее утро<br/><br/>
@@ -2541,12 +2547,12 @@
         Эта функция теперь доступна в виде <a href="moreInfoLink">отдельного приложения</a>.
     ]]></string>
 
-    <string name="privacy_policy0"><![CDATA[<b>Заявление о конфиденциальности:</b><br/>Suntimes <b>не собирает, не хранит и не передает</b> личные данные пользователя. Приложение <b>не содержит рекламы</b>, <b>аналитики</b>, <b>трекеров</b> и <b>не требует лишних разрешений</b>.</string>
-    <string name="privacy_policy"><![CDATA[<b>Заявление о конфиденциальности:</b><br/>Suntimes <b>не собирает, не хранит и не передает</b> личные данные пользователя. Приложение <b>не содержит рекламы</b>, <b>аналитики</b>, <b>трекеров</b> и <b>не требует лишних разрешений</b>. <br/><br/>Приложение настраивается на основе данных о местоположении. Эта информация (и другие данные конфигурации, используемые приложением) хранятся локально и не покидают устройство.<br/><br/><xliff:g id="permissionsExplained">%1$s</xliff:g>]]></string>
+    <string name="privacy_policy0"><![CDATA[<b>Заявление о конфиденциальности:</b><br/>Suntimes <b>не собирает, не хранит и не передает</b> личные данные пользователя. Приложение <b>не содержит рекламу</b>, <b>сбор аналитики</b>, <b>трекеры</b> и <b>не требует лишних разрешений</b>.]]></string>  <!-- brief statement (welcome dialog) -->
+    <string name="privacy_policy"><![CDATA[<b>Заявление о конфиденциальности:</b><br/>Suntimes <b>не собирает, не хранит и не передает</b> личные данные пользователя. Приложение <b>не содержит рекламы</b>, <b>аналитики</b>, <b>трекеров</b> и <b>не требует лишних разрешений</b>. <br/><br/>Приложение настраивается на основе данных о местоположении. Эта информация (и другие данные конфигурации, используемые приложением) хранятся локально и не покидают устройство.<br/><br/><xliff:g id="permissionsExplained">%1$s</xliff:g>]]></string>  <!-- full statement (about dialog) -->
     <string name="privacy_permission_location"><![CDATA[Suntimes требуется разрешение на <b>определение местоположения</b>, чтобы узнать вашу текущую долготу и широту. Данное разрешение является <b>необязательным</b>: по умолчанию местоположение настраивается вручную.]]></string>
     <string name="privacy_permission_storage"><![CDATA[Suntimes требуется разрешение на <b>использование внешнего хранилища</b> для резервного копирования или экспорта данных в файл (например, мест и тем оформления).]]></string>
     <string name="privacy_permission_storage1"><![CDATA[Suntimes Alarms требуется разрешение на <b>использование внешнего хранилища</b> для воспроизведения звуков, находящихся на SD-карте. <br/><br/>Это разрешение является необязательным: если доступ запрещен, будет воспроизводиться звук по умолчанию. Это разрешение не требуется для использования встроенных (системных) звуков, размещенных в Media Storage.]]></string>
-    <string name="privacy_permission_dnd"><![CDATA[Suntimes требуется доступ к режиму <b>Не беспокоить</b>, чтобы менять его настройки в режиме сна]]></string>
+    <string name="privacy_permission_dnd"><![CDATA[Suntimes требуется доступ к режиму <b>«Не беспокоить»</b>, чтобы менять его настройки в режиме сна]]></string>
     <string name="privacy_permissiondialog_prompt"><![CDATA[Запросить разрешения?]]></string>
     <string name="privacy_permissiondialog_ignore">Отклонить</string>
     <string name="privacy_permissiondialog_title">Разрешения</string>
@@ -2568,7 +2574,7 @@
 
     <string name="dialog_ok">ОК</string>
     <string name="dialog_cancel">Отменить</string>
-    <string name="dialog_msg_donotshowagain">Больше не показывать это сообщение</string>  <!-- checkbox text -->
+    <string name="dialog_msg_donotshowagain">Больше не показывать</string>  <!-- checkbox text -->
 
     <!-- calculator implementations -->
     <string name="calculator_displayString_sunrisesunsetlib">github.com/mikereedell/sunrisesunsetlib-java</string>
