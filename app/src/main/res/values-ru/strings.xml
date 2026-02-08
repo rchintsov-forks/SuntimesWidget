@@ -532,9 +532,9 @@
     <string name="widgetMode3x2_worldmap">@string/configAction_worldMap</string>     <!-- setting -->
 
     <string name="widgetMode_sunPosMap_simplerectangular">Карта-схема</string>  <!-- setting -->
-    <string name="widgetMode_sunPosMap_simpleazimuthal">Полярная (Северный п.)</string>     <!-- setting -->
+    <string name="widgetMode_sunPosMap_simpleazimuthal">Полярная (Северн. п.)</string>     <!-- setting -->
     <string name="widgetMode_sunPosMap_simpleazimuthal_south">Полярная (Южный п.)</string>     <!-- setting -->
-    <string name="widgetMode_sunPosMap_bluemarble">Спутниковое фото</string>    <!-- setting -->
+    <string name="widgetMode_sunPosMap_bluemarble">Спутниковый снимок</string>    <!-- setting -->
     <string name="widgetMode_sunPosMap_simpleazimuthal_location">Азимутальн. равноудал.</string>     <!-- setting -->
 
     <string name="worldmap_projection_equirectangular">Равноудаленная прямоугольная</string>
@@ -1566,7 +1566,7 @@
 
     <!-- App Setting: Show Cross Quarter days -->
     <string name="configLabel_ui_showCrossQuarter">Межсезонные дни</string>
-    <string name="configLabel_ui_showCrossQuarter_summary">Включить срединные (промежуточные) дни между солнцестояниями и равноденствиями</string>
+    <string name="configLabel_ui_showCrossQuarter_summary">Показывать срединные (промежуточные) дни между солнцестояниями и равноденствиями</string>
 
     <!-- App Setting: Show Equinox / Solstice -->
     <string name="configLabel_ui_showEquinox">Солнцестояние и равноденствие</string>
@@ -2290,7 +2290,7 @@
     ]]></string>
 
     <string name="app_legal2"><![CDATA[<b>Переводы:</b><br/>]]><xliff:g id="locale_credits">%1$s</xliff:g></string>
-    <string name="translationCreditsFormat"><![CDATA[&#8226;&nbsp;<b><xliff:g id="languageName">%1$s</xliff:g></b> от <xliff:g id="authorList">%2$s</xliff:g>.]]></string>
+    <string name="translationCreditsFormat"><![CDATA[&#8226;&nbsp;<b><xliff:g id="languageName">%1$s</xliff:g></b> от <xliff:g id="authorList">%2$s</xliff:g>]]></string>
     <string name="authorListFormat_i"><xliff:g id="authorName1">%1$s</xliff:g>, <xliff:g id="authorName2">%2$s</xliff:g></string>  <!-- e.g. "name1, name2, name3, ..." -->
     <string name="authorListFormat_n"><xliff:g id="authorListFormat_i">%1$s</xliff:g> и <xliff:g id="authorName">%2$s</xliff:g></string>  <!-- e.g. "..., and nameN" -->
     <string name="creditsTab">Благодарности</string>
@@ -2547,9 +2547,9 @@
         Эта функция теперь доступна в виде <a href="moreInfoLink">отдельного приложения</a>.
     ]]></string>
 
-    <string name="privacy_policy0"><![CDATA[<b>Заявление о конфиденциальности:</b><br/>Suntimes <b>не собирает, не хранит и не передает</b> личные данные пользователя. Приложение <b>не содержит рекламу</b>, <b>сбор аналитики</b>, <b>трекеры</b> и <b>не требует лишних разрешений</b>.]]></string>  <!-- brief statement (welcome dialog) -->
-    <string name="privacy_policy"><![CDATA[<b>Заявление о конфиденциальности:</b><br/>Suntimes <b>не собирает, не хранит и не передает</b> личные данные пользователя. Приложение <b>не содержит рекламы</b>, <b>аналитики</b>, <b>трекеров</b> и <b>не требует лишних разрешений</b>. <br/><br/>Приложение настраивается на основе данных о местоположении. Эта информация (и другие данные конфигурации, используемые приложением) хранятся локально и не покидают устройство.<br/><br/><xliff:g id="permissionsExplained">%1$s</xliff:g>]]></string>  <!-- full statement (about dialog) -->
-    <string name="privacy_permission_location"><![CDATA[Suntimes требуется разрешение на <b>определение местоположения</b>, чтобы узнать вашу текущую долготу и широту. Данное разрешение является <b>необязательным</b>: по умолчанию местоположение настраивается вручную.]]></string>
+    <string name="privacy_policy0"><![CDATA[<b>Заявление о конфиденциальности:</b><br/>Suntimes <b>не собирает, не хранит и не передает</b> личные данные пользователя. Приложение <b>не содержит рекламы</b>, <b>сбора аналитики</b>, <b>трекеров</b> и <b>не требует лишних разрешений</b>.]]></string>  <!-- brief statement (welcome dialog) -->
+    <string name="privacy_policy"><![CDATA[<b>Заявление о конфиденциальности:</b><br/>Suntimes <b>не собирает, не хранит и не передает</b> личные данные пользователя. Приложение <b>не содержит рекламы</b>, <b>сбора аналитики</b>, <b>трекеров</b> и <b>не требует лишних разрешений</b>. <br/><br/>Приложение настраивается на основе данных о местоположении. Эта информация (и другие данные конфигурации, используемые приложением) хранятся локально и не покидают устройство.<br/><br/><xliff:g id="permissionsExplained">%1$s</xliff:g>]]></string>  <!-- full statement (about dialog) -->
+    <string name="privacy_permission_location"><![CDATA[Suntimes требуется разрешение на <b>определение местоположения</b>, чтобы узнать вашу текущую долготу и широту. Данное разрешение является <b>необязательным</b> — по умолчанию местоположение настраивается вручную.]]></string>
     <string name="privacy_permission_storage"><![CDATA[Suntimes требуется разрешение на <b>использование внешнего хранилища</b> для резервного копирования или экспорта данных в файл (например, мест и тем оформления).]]></string>
     <string name="privacy_permission_storage1"><![CDATA[Suntimes Alarms требуется разрешение на <b>использование внешнего хранилища</b> для воспроизведения звуков, находящихся на SD-карте. <br/><br/>Это разрешение является необязательным: если доступ запрещен, будет воспроизводиться звук по умолчанию. Это разрешение не требуется для использования встроенных (системных) звуков, размещенных в Media Storage.]]></string>
     <string name="privacy_permission_dnd"><![CDATA[Suntimes требуется доступ к режиму <b>«Не беспокоить»</b>, чтобы менять его настройки в режиме сна]]></string>
