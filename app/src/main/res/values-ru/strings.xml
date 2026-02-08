@@ -350,7 +350,7 @@
     <string name="configLabel_general_showAbbrMonth_summary">Показывать сокращенные названия месяцев при отображении дат</string>        <!-- checkbox label -->
 
     <string name="configLabel_general_showWeeks">Использовать недели</string>        <!-- checkbox label -->
-    <string name="configLabel_general_showWeeks_summary">Промежутки времени длиной более 7 дней показывать как недели (15 дн. -> 2 нед. 1 д.)</string>    <!-- checkbox label -->
+    <string name="configLabel_general_showWeeks_summary">Промежутки времени длиной более 7 дней показывать как недели (15 дн. → 2 нед. 1 д.)</string>    <!-- checkbox label -->
 
     <string name="configLabel_general_showHours">Показывать часы</string>        <!-- checkbox label -->
     <string name="configLabel_general_showHours_summary">Проказывать часы и минуты в промежутках времени больше суток</string>    <!-- checkbox label -->
