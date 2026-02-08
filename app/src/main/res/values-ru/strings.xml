@@ -94,7 +94,7 @@
     -->
     <string name="timezoneField"><xliff:g id="timezone" example="US/Mountain">%1$s</xliff:g> <xliff:g id="dstTag">[d]</xliff:g><xliff:g id="warningTag">[w]</xliff:g></string>
     <string name="timezoneWarning"><xliff:g id="warningTag">[w]</xliff:g>  Часовой пояс может не соответствовать текущему местоположению</string>  <!-- snackbar message -->
-    <string name="timezoneWarningNote">пояс <xliff:g id="tzID">%s</xliff:g> отличается от местного среднего солнечного времени на <xliff:g id="timeSpan">%s</xliff:g> в городе <xliff:g id="locationName">%s</xliff:g></string>
+    <string name="timezoneWarningNote">время по поясу <xliff:g id="tzID">%s</xliff:g> отличается от местного среднего солнечного времени в городе <xliff:g id="locationName">%s</xliff:g> на <xliff:g id="timeSpan">%s</xliff:g></string>
     <string name="timezoneExtraDST"><xliff:g id="dstTag">[d]</xliff:g> <xliff:g id="dstOffset" example="+1h">%1$s</xliff:g> летнее время</string>  <!-- timezone dialog label -->
     <string name="timezoneExtraDST_short"><xliff:g id="dstOffset" example="+1h">%1$s</xliff:g> л.вр.</string>  <!-- timezone dialog label -->
     <string name="timezoneExtraApparentSolar"><xliff:g id="dstTag">[d]</xliff:g> <xliff:g id="dstOffset" example="+8m">%1$s</xliff:g> по уравнению времени</string>  <!-- timezone dialog label -->
@@ -110,7 +110,7 @@
     <string name="dateWarning"><xliff:g id="warningTag">[w]</xliff:g>  Дата установлена на день, отличный от сегодняшнего</string>  <!-- snackbar message -->
 
     <!-- DateDesc: some day in the past (appears in dateField) -->
-    <string name="past_today">В прошлом</string>
+    <string name="past_today">в прошлом</string>
     <string name="past_n">В прошлом (%1$s дн.)</string>
 
     <!-- DateDesc: yesterday/today/tomorrow (appears in dateField) -->
@@ -231,7 +231,7 @@
     <string name="delta_seconds">сек</string>  <!-- e.g. 4s -->
 
     <string name="hence">через  <xliff:g id="timeSpan">%1$s</xliff:g></string>  <!-- e.g. 15d 23h from now -->
-    <string name="ago">было  <xliff:g id="timeSpan">%1$s</xliff:g>  назад</string>         <!-- e.g. 1y 15d 12h ago -->
+    <string name="ago"><xliff:g id="timeSpan">%1$s</xliff:g>  назад</string>         <!-- e.g. 1y 15d 12h ago -->
 
     <!-- misc time values: might be displayed in a timeField in place of an actual time -->
     <string name="time_none">—</string>  <!-- no time / time does not occur -->
@@ -242,13 +242,13 @@
     <string name="time_format_24hr_veryshort_withseconds"><xliff:g id="patternHours">HH</xliff:g>:<xliff:g id="patternMinutes">mm</xliff:g>:<xliff:g id="patternSeconds">ss</xliff:g></string>  <!-- 24hr time format (w/ seconds) -->
     <string name="time_format_12hr_short"><xliff:g id="hoursMinutes">%1$s</xliff:g> <xliff:g id="suffix">%2$s</xliff:g></string>
     <string name="date_format_veryshort"><xliff:g id="patternDay">d</xliff:g> <xliff:g id="patternMonth">MMM</xliff:g></string>                                           <!-- MMM d ... e.g. Dec 3 -->  <!-- RU: обычно "d MMM" (например, 3 дек.) -->
-    <string name="date_format_short"><xliff:g id="patternDay">d</xliff:g> <xliff:g id="patternMonth">MMMM</xliff:g> один</string>                                           <!-- MMMM d ... e.g. December 3 -->
-    <string name="date_format_long"><xliff:g id="patternDay">d</xliff:g> <xliff:g id="patternMonth">MMMM</xliff:g> <xliff:g id="patternYear">yyyy</xliff:g> г. два</string>  <!-- MMMM d, yyyy ... e.g. December 3, 2017 -->
-    <string name="datetime_format_short"><xliff:g id="month">%1$s</xliff:g> в <xliff:g id="time">%2$s</xliff:g>  три</string>           <!-- shortDate, time ... e.g. December 3, 11:00 am -->
-    <string name="datetime_format_long"><xliff:g id="monthYear">%1$s</xliff:g> в <xliff:g id="time">%2$s</xliff:g> четыре</string>        <!-- longDate, time ... e.g. December 3, 2017, 11:00 am -->
-    <string name="datetime_format_verylong"><xliff:g id="dateFormat">%1$s</xliff:g> [<xliff:g id="tzID" example="UTC">%2$s</xliff:g>]</string>  <!-- datetime_format and timezone -->
-    <string name="datetime_format_verylong1"><xliff:g id="dateFormat">%1$s</xliff:g> [<xliff:g id="tzID" example="UTC">%2$s</xliff:g>] [<xliff:g id="suffix" example="Future">%3$s</xliff:g>]</string>  <!-- datetime_format and timezone (+suffix) -->
-    <string name="dateyear_format_short"><xliff:g id="patternYear">yyyy</xliff:g> г. пять</string>                                        <!-- yyyy ... e.g. 2017 -->
+    <string name="date_format_short"><xliff:g id="patternDay">d</xliff:g> <xliff:g id="patternMonth">MMMM</xliff:g></string>                                           <!-- MMMM d ... e.g. December 3 -->
+    <string name="date_format_long"><xliff:g id="patternDay">d</xliff:g> <xliff:g id="patternMonth">MMMM</xliff:g> <xliff:g id="patternYear">yyyy</xliff:g> г.</string>  <!-- MMMM d, yyyy ... e.g. December 3, 2017 -->
+    <string name="datetime_format_short"><xliff:g id="month">%1$s</xliff:g> в <xliff:g id="time">%2$s</xliff:g></string>           <!-- shortDate, time ... e.g. December 3, 11:00 am -->
+    <string name="datetime_format_long"><xliff:g id="monthYear">%1$s</xliff:g> в <xliff:g id="time">%2$s</xliff:g></string>        <!-- longDate, time ... e.g. December 3, 2017, 11:00 am -->
+    <string name="datetime_format_verylong"><xliff:g id="dateFormat">%1$s</xliff:g> по <xliff:g id="tzID" example="UTC">%2$s</xliff:g></string>  <!-- datetime_format and timezone -->
+    <string name="datetime_format_verylong1"><xliff:g id="dateFormat">%1$s</xliff:g> по <xliff:g id="tzID" example="UTC">%2$s</xliff:g> (<xliff:g id="suffix" example="Future">%3$s</xliff:g>)</string>  <!-- datetime_format and timezone (+suffix) -->
+    <string name="dateyear_format_short"><xliff:g id="patternYear">yyyy</xliff:g></string>                                        <!-- yyyy ... e.g. 2017 -->
 
     <string name="share_format"><xliff:g id="label">%1$s</xliff:g>\n<xliff:g id="formattedDate">%2$s</xliff:g></string>
     <string name="share_format_equinox">@string/share_format</string>   <!-- Summer solstice on June 20. -->
