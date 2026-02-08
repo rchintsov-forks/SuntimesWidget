@@ -94,7 +94,7 @@
     -->
     <string name="timezoneField"><xliff:g id="timezone" example="US/Mountain">%1$s</xliff:g> <xliff:g id="dstTag">[d]</xliff:g><xliff:g id="warningTag">[w]</xliff:g></string>
     <string name="timezoneWarning"><xliff:g id="warningTag">[w]</xliff:g>  Часовой пояс может не соответствовать текущему местоположению</string>  <!-- snackbar message -->
-    <string name="timezoneWarningNote">пояс <xliff:g id="tzID">%s</xliff:g> отличается от местного среднего солнечного времени на <xliff:g id="timeSpan">%s</xliff:g> в г. <xliff:g id="locationName">%s</xliff:g></string>
+    <string name="timezoneWarningNote">пояс <xliff:g id="tzID">%s</xliff:g> отличается от местного среднего солнечного времени на <xliff:g id="timeSpan">%s</xliff:g> в городе <xliff:g id="locationName">%s</xliff:g></string>
     <string name="timezoneExtraDST"><xliff:g id="dstTag">[d]</xliff:g> <xliff:g id="dstOffset" example="+1h">%1$s</xliff:g> летнее время</string>  <!-- timezone dialog label -->
     <string name="timezoneExtraDST_short"><xliff:g id="dstOffset" example="+1h">%1$s</xliff:g> л.вр.</string>  <!-- timezone dialog label -->
     <string name="timezoneExtraApparentSolar"><xliff:g id="dstTag">[d]</xliff:g> <xliff:g id="dstOffset" example="+8m">%1$s</xliff:g> по уравнению времени</string>  <!-- timezone dialog label -->
@@ -604,7 +604,7 @@
     <string name="configAction_savePlace">Сохранить</string>         <!-- button (contentDescription) -->
 
     <!-- Widget Setting: timezone -->
-    <string name="timezoneMode_standard">Согласно стандарту:</string>                       <!-- setting -->
+    <string name="timezoneMode_standard">Согласно стандарту (выбрать)</string>                       <!-- setting -->
     <string name="timezoneMode_current">Системный часовой пояс</string>               <!-- setting -->
     <string name="timezoneMode_custom">Пользовательский</string>                    <!-- setting -->
 
@@ -620,7 +620,7 @@
     <string name="configLabel_timezone">Часовой пояс</string>             <!-- group title -->
     <string name="configLabel_timezone_mode">Режим:</string>                     <!-- spinner label -->
     <string name="configLabel_timezone_custom">Часовой пояс:</string>              <!-- spinner label -->
-    <string name="configLabel_timezone_standard">Согласно стандарту:</string>                   <!-- spinner label -->
+    <string name="configLabel_timezone_standard">Согласно стандарту (выбрать)</string>                   <!-- spinner label -->
     <string name="configLabel_timezone_fromapp">Использовать часовой пояс приложения</string>                  <!-- checkbox text -->
 
     <!-- Widget Setting: timeFormat mode -->
@@ -2271,7 +2271,7 @@
     <string name="app_name_solsticewidget0">Солнцестояние (виджет)</string>
     <string name="app_name_moonwidget0">Лунный виджет</string>
     <string name="app_version"><![CDATA[<b>Версия:</b>]]> <xliff:g id="versionString">%s</xliff:g></string>
-    <string name="app_shortdesc">Показывает время солнечного и лунного освещения</string>
+    <string name="app_shortdesc">Показывает время солнечного и лунного освещения.</string>
     <string name="app_support_url"><![CDATA[
         <b>Поддержка:</b> посетите
         <a href="%1$s">трекер отслеживания проблем</a> на GitHub для создания запроса.
@@ -2435,18 +2435,18 @@
     ]]></string>
 
     <string name="help_general_dst"><![CDATA[
-          <b>Летнее и зимнее время:</b> значок [Icon DST] показывается, когда алгоритм учитывает переход на летнее/зимнее время или время корректируется похожим правилом<br/><br/>
+          <b>Летнее и зимнее время:</b> значок [Icon DST] отображается, когда алгоритм учитывает переход на летнее/зимнее время или время корректируется похожим правилом<br/><br/>
     ]]></string>
 
     <string name="help_general_actualTime"><![CDATA[
-          <b>Фактическое время:</b> Солнце находится на горизонте. Это приблизительное время восхода и захода солнца.<br/>
+          <b>Фактическое время:</b> солнце находится на горизонте. Это приблизительное время восхода и захода солнца.<br/>
     ]]></string>
     <string name="help_general_twilight"><![CDATA[
-          <b>Время начала</b> указывает на начало каждого периода сумерек (<b>рассвет</b>), а <b>время окончания</b> — на их конец (<b>сумерки</b>).<br/><br/>
-          <b>Гражданские сумерки:</b> Солнце на 0-6 градусов ниже линии горизонта, видны самые яркие звезды. В это время хватает света для большинства занятий на открытом воздухе без применения искусственного освещения.<br/><br/>
-          <b>Навигационные сумерки:</b> Солнце на 6-12 градусов ниже линии горизонта, очертания объектов и сама линия горизонта становятся все менее четкими. Уже недостаточно света для большинства занятий на открытом воздухе без искусственного освещения.<br/><br/>
-          <b>Астрономические сумерки:</b> Солнце на 12–18 градусов ниже линии горизонта, почти полная тьма.<br/>
-          <b>Ночь:</b> Солнце находится более чем на 18 градусов ниже горизонта. Видны самые далекие звезды.<br/><br/>
+          <b>Время начала</b> указывает на начало каждого периода сумерек (рассвет), а <b>время окончания</b> — на их конец (сумерки).<br/><br/>
+          <b>Гражданские сумерки:</b> солнце на 0-6 градусов ниже линии горизонта, видны самые яркие звезды. В это время хватает света для большинства занятий на открытом воздухе без применения искусственного освещения.<br/><br/>
+          <b>Навигационные сумерки:</b> солнце на 6-12 градусов ниже линии горизонта, очертания объектов и сама линия горизонта становятся все менее четкими. Уже недостаточно света для большинства занятий на открытом воздухе без искусственного освещения.<br/><br/>
+          <b>Астрономические сумерки:</b> солнце на 12-18 градусов ниже линии горизонта, почти полная тьма.<br/><br/>
+          <b>Ночь:</b> солнце находится более чем на 18 градусов ниже горизонта. Видны самые далекие звезды.<br/>
     ]]></string>
     <string name="help_general_twilight_more"><![CDATA[
           <b>Белые ночи:</b> Солнце не опускается ниже 6 градусов за линией горизонта. Всю ночь достаточно светло для большинства занятий на открытом воздухе.<br/><br/>
