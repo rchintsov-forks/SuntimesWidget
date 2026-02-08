@@ -242,13 +242,13 @@
     <string name="time_format_24hr_veryshort_withseconds"><xliff:g id="patternHours">HH</xliff:g>:<xliff:g id="patternMinutes">mm</xliff:g>:<xliff:g id="patternSeconds">ss</xliff:g></string>  <!-- 24hr time format (w/ seconds) -->
     <string name="time_format_12hr_short"><xliff:g id="hoursMinutes">%1$s</xliff:g> <xliff:g id="suffix">%2$s</xliff:g></string>
     <string name="date_format_veryshort"><xliff:g id="patternDay">d</xliff:g> <xliff:g id="patternMonth">MMM</xliff:g></string>                                           <!-- MMM d ... e.g. Dec 3 -->  <!-- RU: обычно "d MMM" (например, 3 дек.) -->
-    <string name="date_format_short"><xliff:g id="patternDay">d</xliff:g> <xliff:g id="patternMonth">MMMM</xliff:g> dp-1</string>                                           <!-- MMMM d ... e.g. December 3 -->
-    <string name="date_format_long"><xliff:g id="patternDay">d</xliff:g> <xliff:g id="patternMonth">MMMM</xliff:g> <xliff:g id="patternYear">yyyy</xliff:g> г. dp-2</string>  <!-- MMMM d, yyyy ... e.g. December 3, 2017 -->
-    <string name="datetime_format_short"><xliff:g id="month">%1$s</xliff:g> в <xliff:g id="time">%2$s</xliff:g>  dp-3</string>           <!-- shortDate, time ... e.g. December 3, 11:00 am -->
-    <string name="datetime_format_long"><xliff:g id="monthYear">%1$s</xliff:g> в <xliff:g id="time">%2$s</xliff:g> dp-4</string>        <!-- longDate, time ... e.g. December 3, 2017, 11:00 am -->
+    <string name="date_format_short"><xliff:g id="patternDay">d</xliff:g> <xliff:g id="patternMonth">MMMM</xliff:g> один</string>                                           <!-- MMMM d ... e.g. December 3 -->
+    <string name="date_format_long"><xliff:g id="patternDay">d</xliff:g> <xliff:g id="patternMonth">MMMM</xliff:g> <xliff:g id="patternYear">yyyy</xliff:g> г. два</string>  <!-- MMMM d, yyyy ... e.g. December 3, 2017 -->
+    <string name="datetime_format_short"><xliff:g id="month">%1$s</xliff:g> в <xliff:g id="time">%2$s</xliff:g>  три</string>           <!-- shortDate, time ... e.g. December 3, 11:00 am -->
+    <string name="datetime_format_long"><xliff:g id="monthYear">%1$s</xliff:g> в <xliff:g id="time">%2$s</xliff:g> четыре</string>        <!-- longDate, time ... e.g. December 3, 2017, 11:00 am -->
     <string name="datetime_format_verylong"><xliff:g id="dateFormat">%1$s</xliff:g> [<xliff:g id="tzID" example="UTC">%2$s</xliff:g>]</string>  <!-- datetime_format and timezone -->
     <string name="datetime_format_verylong1"><xliff:g id="dateFormat">%1$s</xliff:g> [<xliff:g id="tzID" example="UTC">%2$s</xliff:g>] [<xliff:g id="suffix" example="Future">%3$s</xliff:g>]</string>  <!-- datetime_format and timezone (+suffix) -->
-    <string name="dateyear_format_short"><xliff:g id="patternYear">yyyy</xliff:g> г. dp-5</string>                                        <!-- yyyy ... e.g. 2017 -->
+    <string name="dateyear_format_short"><xliff:g id="patternYear">yyyy</xliff:g> г. пять</string>                                        <!-- yyyy ... e.g. 2017 -->
 
     <string name="share_format"><xliff:g id="label">%1$s</xliff:g>\n<xliff:g id="formattedDate">%2$s</xliff:g></string>
     <string name="share_format_equinox">@string/share_format</string>   <!-- Summer solstice on June 20. -->
@@ -2254,7 +2254,7 @@
     <string name="crash_dialog_title">Отчет о сбое</string>
     <string name="crash_dialog_message">%s аварийно завершилось…</string>
     <string name="crash_dialog_message1"><![CDATA[
-        Помогите улучшить это приложение, сообщив об этом сбое:<br/><br/>
+        Помогите улучшить приложение, сообщив об этом сбое:<br/><br/>
         <b>%1$s</b>
     ]]></string>
     <string name="crash_dialog_copy">Копировать отчет</string>
